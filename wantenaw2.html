@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--Willem Wantenaar - 991512290-->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Willem Wantenaar</title>
+    <link rel="stylesheet" href="css/wantenaw.css">
+
+    <script type="text/javascript" src=js/jquery.js></script>
+    <script type="text/javascript" src=js/wantenaw2.js></script>
+
+    <script>
+        $(document).ready(function () {
+            var name = localStorage.getItem("fName") + " " + localStorage.getItem("lName");
+            $("#nameHeader").append(`My Name is ${name}`);
+            var studentId = localStorage.getItem("studentId");
+            $("#studentIdHeader").append(`My Student Number is ${studentId}`);
+            var login = localStorage.getItem("login");
+            $("#loginHeader").append(`My Sheridan Login is ${login}`);
+        });
+    </script>
+
+
+</head>
+<body>
+    <h3 id="nameHeader">
+        
+    </h3>
+    <h3 id="studentIdHeader">
+        
+    </h3>
+    <h3 id="loginHeader">
+        
+    </h3>
+    <img id="willemImage" src="images/WillemWantenaar.jpg" />
+    <a id="page2Anchor" href="index.html"><strong>Return to last page</strong></a>
+</body>

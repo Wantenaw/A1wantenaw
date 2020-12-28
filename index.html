@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--Willem Wantenaar - 991512290-->
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Willem Wantenaar</title>
+        <link rel="stylesheet" href="css/wantenaw.css">
+
+        <script type="text/javascript" src=js/jquery.js></script>
+        <script type="text/javascript" src=js/wantenaw.js></script>
+
+        <script>
+            $(document).ready(function () {
+                // Obtaining header information from wantenaw.js and using jquery.js to overwrite default header
+                $("#headerText").html(headerText);
+                // Obtaining list information by checking each letter in username is a valid letter and creating the ul with the image and element name
+                for(var i = 0 ; i <= 8 ; i++){
+                    var letter = username.charAt(i);
+                    for(var x = 0 ; x < myData.length-1 ; x++){
+                        if(letter ==  myData[x].imgName.charAt(0)){
+                            $("#studentLogin").append(`<ul id='${myData[x].imgName.charAt(0)}'> <img id='morseImages' 
+                                src='images/${myData[x].imgName}'/> || </td><td>  ${myData[x].element} </ul>`);
+                        }
+                    }
+                }
+                // Obtaining footer information from wantenaw.js and using jquery.js to overwrite default footer
+                $("#footerText").html(footerText);
+            });
+        </script>
+
+    </head>
+    <body>
+        <header>
+            <h2 style="text-align: center;">
+                <section id="headerText"></section>
+            </h2>
+        </header>
+        <section id="areaTemplate">
+            <div id="listArea">
+                <h3 style="text-align: center;">My Data</h3>
+                <list name="studentLogin" id="studentLogin">
+                
+                </list>
+            </div>
+            <div id="linkArea">
+                <h3 style="text-align: center;">Buttons & Links</h3>
+                <button id="toggleTango" onclick="search()"><strong>Toggle Whiskey</strong></button><br>
+                <button id="toggleCSS" onclick="listTamper()"><strong>Toggle CSS</strong></button><br><br>
+                <a id="page2Anchor" href="wantenaw2.html"><strong>Redirect to Page 2</strong></a>
+            </div>
+        </section>
+        <footer>
+            <hr>
+            <h5 style="text-align: center;">
+                <section id="footerText"></section>
+            </h5>
+        </footer>
+    </body>
+</html>

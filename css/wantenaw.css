@@ -1,0 +1,59 @@
+body {
+    background-color: white;
+    font-family: monospace;
+}
+#areaTemplate{
+   display: flex;
+}
+h3{
+padding-bottom: 0;
+}
+/* Everything pertaining to the list area */
+#listArea{
+    flex: 2;
+    border: thin solid black;
+    border-radius: 5px;
+    align-items: center;
+}
+#studentLogin{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+#morseImages{
+    height: 25px;
+    width: 50px;
+}
+/* Everything for button/link area */
+#linkArea{
+    flex: 2;
+    border: thin solid black;
+    border-radius: 5px;
+    align-items: center;
+}
+button{
+    align-content: center;
+    padding: 10px 15px;
+    margin: 25px;
+}
+button:hover{
+    padding: 11px 16px;
+    background-color: lightblue;
+}
+#page2Anchor{
+    align-self: center;
+    display: inline-block;
+    border: thin dotted black;
+    padding: 10px 15px;
+}
+/* Page 2 css */
+#willemImage{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    height: 340px;
+    width: 340px ;
+    border-radius: 4px;
+    margin-left: 50%;
+}
